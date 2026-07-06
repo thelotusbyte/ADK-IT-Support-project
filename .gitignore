@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Configuration files (containing secrets)
+.env
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -1,0 +1,6 @@
+google-adk
+python-dotenv
+pydantic
+mcp
+psutil
+beautifulsoup4
