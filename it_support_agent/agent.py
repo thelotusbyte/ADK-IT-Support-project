@@ -40,7 +40,7 @@ def save_user_query(node_input: str):
 # 2. Classify Issue Agent Node
 classify_agent = Agent(
     name="classify_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="""
     Analyze the user's IT support query and classify it into exactly one of the following categories:
     - PERFORMANCE: Issues regarding system slowness, high CPU/memory usage, startup delays, freezing, or disk space.
@@ -66,7 +66,7 @@ def issue_router(node_input: str):
 # 4. Specialized Agents (Equipped with MCP Tools)
 performance_agent = Agent(
     name="performance_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="""
     You are an expert Windows Performance Diagnostic Agent.
     The user is experiencing a performance issue: {user_query}.
@@ -93,7 +93,7 @@ performance_agent = Agent(
 
 network_agent = Agent(
     name="network_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="""
     You are an expert Windows Network Diagnostic Agent.
     The user is experiencing a network issue: {user_query}.
@@ -120,7 +120,7 @@ network_agent = Agent(
 
 battery_agent = Agent(
     name="battery_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="""
     You are an expert Windows Battery Diagnostic Agent.
     The user is experiencing a battery/power issue: {user_query}.
@@ -142,7 +142,7 @@ battery_agent = Agent(
 
 browser_agent = Agent(
     name="browser_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="""
     You are an expert Windows Browser Diagnostic Agent.
     The user is experiencing a browser issue: {user_query}.
